@@ -1,0 +1,588 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >sails-rabbitmq (v0.12.3)</a>
+</h1>
+<h4>sails-rabbitmq adapter for Sails / Waterline</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-rabbitmq">module sails-rabbitmq</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.create">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getExchangeName">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getExchangeName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getPersistenceConnection">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getPersistenceConnection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getPublishSocket">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getPublishSocket
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getPushSocket">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getPushSocket
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getQueueName">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getQueueName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getRoutingKey">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getRoutingKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getSocket">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getSocket
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getSubscribeSocket">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getSubscribeSocket
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.getWorkerSocket">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getWorkerSocket
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.parseRoutingKey">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>parseRoutingKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.publish">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>publish
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.registerConnection">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>registerConnection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.setupConnection">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>setupConnection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.setupConnectionSockets">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>setupConnectionSockets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.teardown">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>teardown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-rabbitmq.update">
+            function <span class="apidocSignatureSpan">sails-rabbitmq.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-rabbitmq.</span>connections</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-rabbitmq.</span>defaults</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">sails-rabbitmq.</span>pkFormat</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-rabbitmq" id="apidoc.module.sails-rabbitmq">module sails-rabbitmq</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.create" id="apidoc.element.sails-rabbitmq.create">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+module.exports.rabbitmq = {
+    pkFormat: &#x27;string&#x27;
+};
+```
+
+## Usage
+
+### `.<span class="apidocCodeKeywordSpan">create</span>(values, callback)`
+### `.update(criteria, values, callback)`
+
+The `.create()` and `.update()` methods can be called per usual on
+RabbitMQ-enabled models. RabbitMQ dispatches a message to an available
+Persistence Worker, wherein the object is created or updated by the
+persistence connection (e.g. `regularPostgres` above), and returned to the
+provided callback (or Promise).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getExchangeName" id="apidoc.element.sails-rabbitmq.getExchangeName">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getExchangeName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getPersistenceConnection" id="apidoc.element.sails-rabbitmq.getPersistenceConnection">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getPersistenceConnection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getPublishSocket" id="apidoc.element.sails-rabbitmq.getPublishSocket">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getPublishSocket
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getPushSocket" id="apidoc.element.sails-rabbitmq.getPushSocket">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getPushSocket
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getQueueName" id="apidoc.element.sails-rabbitmq.getQueueName">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getQueueName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getRoutingKey" id="apidoc.element.sails-rabbitmq.getRoutingKey">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getRoutingKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getSocket" id="apidoc.element.sails-rabbitmq.getSocket">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getSocket
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getSubscribeSocket" id="apidoc.element.sails-rabbitmq.getSubscribeSocket">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getSubscribeSocket
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+provided callback (or Promise).
+
+## Low-level API
+
+&#x22;Low-level&#x22; is a nice way of saying &#x22;only use these methods if you know what you&#x27;re
+doing&#x22;.
+
+### `Model.<span class="apidocCodeKeywordSpan">getSubscribeSocket</span>(options)`
+
+Open a rabbit.js [`SUBSCRIBE`](https://github.com/squaremo/rabbit.js/blob/master/lib/sockets.js#L55)
+socket to your favorite model.
+
+| @param | @description | required |
+|:---|:---|:---|
+| options.where | search criteria | no |
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.getWorkerSocket" id="apidoc.element.sails-rabbitmq.getWorkerSocket">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>getWorkerSocket
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      // see, I told you it was &#x22;low-level&#x22;
+
+      // ...
+    });
+  });
+```
+
+### `Model.<span class="apidocCodeKeywordSpan">getWorkerSocket</span>(options)`
+
+| @param | @description | required |
+|:---|:---|:---|
+| options.name | worker name (must match that of some &#x27;PUSH&#x27; socket) | yes |
+
+```js
+Message.getWorkerSocket({ name: &#x27;encryptionWorker&#x27; })
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.parseRoutingKey" id="apidoc.element.sails-rabbitmq.parseRoutingKey">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>parseRoutingKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.publish" id="apidoc.element.sails-rabbitmq.publish">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>publish
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.registerConnection" id="apidoc.element.sails-rabbitmq.registerConnection">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>registerConnection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.setupConnection" id="apidoc.element.sails-rabbitmq.setupConnection">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>setupConnection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.setupConnectionSockets" id="apidoc.element.sails-rabbitmq.setupConnectionSockets">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>setupConnectionSockets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.teardown" id="apidoc.element.sails-rabbitmq.teardown">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>teardown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-rabbitmq.update" id="apidoc.element.sails-rabbitmq.update">
+        function <span class="apidocSignatureSpan">sails-rabbitmq.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper() {
+  var fn = (this &#x26;&#x26; this !== root &#x26;&#x26; this instanceof wrapper) ? Ctor : func;
+  return fn.apply(thisArg, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    pkFormat: &#x27;string&#x27;
+};
+```
+
+## Usage
+
+### `.create(values, callback)`
+### `.<span class="apidocCodeKeywordSpan">update</span>(criteria, values, callback)`
+
+The `.create()` and `.update()` methods can be called per usual on
+RabbitMQ-enabled models. RabbitMQ dispatches a message to an available
+Persistence Worker, wherein the object is created or updated by the
+persistence connection (e.g. `regularPostgres` above), and returned to the
+provided callback (or Promise).
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
